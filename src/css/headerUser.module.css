@@ -1,0 +1,219 @@
+@keyframes slideIn {
+    from {
+        transform: translateX(100%);
+    }
+
+    to {
+        transform: default
+    }
+}
+
+@keyframes slideOut {
+    from {
+        transform: default
+    }
+
+    to {
+        transform: translateX(100%);
+    }
+}
+
+@keyframes slideInUser {
+    from {
+        transform: translateX(-105%);
+    }
+
+    to {
+        transform: default
+    }
+}
+
+@keyframes slideOutUser {
+    from {
+        transform: default
+    }
+
+    to {
+        transform: translateX(-105%);
+    }
+}
+
+.modalEnter {
+	animation: slideIn 0.3s ease-in-out;
+}
+
+.modalExit {
+	animation: slideOut .3s ease-in-out forwards;
+}
+
+.modalEnterUser {
+	animation: slideInUser 0.3s ease-in-out;
+}
+
+.modalExitUser {
+	animation: slideOutUser .3s ease-in-out forwards;
+}
+
+/*Estilização Principal*/
+.header {
+	width: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	padding: 12px 40px;
+}
+
+.header .coracao {
+	display: flex;
+	align-items: center;
+	background-color: #AFC2FF;
+	color: #003786;
+	padding: 8px 8px;
+	border-radius: 10px;
+}
+
+.header .coracao p {
+	font-weight: bold;
+}
+
+.header .logo {
+	z-index: 13;
+}
+
+.header .menu {
+	display: flex;
+	align-items: center;
+	z-index: 12;
+}
+
+.header .sideBar {
+	position: absolute;
+	width: 250px;
+	background-color: #fff;
+	right: 0px;
+	top: 0;
+	transform: translateX(0%);
+	z-index: 11;
+	border-radius: 10px 0 0 10px;
+	padding-bottom: 42px;
+}
+
+.sideBarUser{
+	position: absolute;
+	padding-right: 1rem;
+	background-color: #fff;
+	left: 0;
+	top: 0;
+	transform: translateX(0%);
+	z-index: 11;
+	border-radius: 0 10px 10px 0;
+	padding-bottom: 42px;
+}
+
+.header .sideBar ul,
+.sideBarUser ul {
+	list-style: none;
+	margin-top: 140px;
+	margin-left: 40px;
+}
+
+.header .sideBar ul li,
+.header .sideBarUser ul li {
+	font-weight: bold;
+	font-size: 24px;
+}
+
+.header .sideBar ul li {
+	text-transform: uppercase;
+}
+
+.header .sideBar ul .coracao {
+	margin-top: 20px;
+}
+
+
+.header .sideBar details summary,
+.header .sideBarUser details summary {
+	font-size: 14px;
+	margin-top: 8px;
+}
+
+.header .sideBar details p,
+.header .sideBarUser details p {
+	font-size: 20px !important;
+}
+
+.header .sideBar summary::after,
+.header .sideBarUser summary::after {
+	content: '\25B6';
+	margin-left: 0.5em; 
+  }
+
+.header .sideBar details[open] summary::after,
+.header .sideBarUser details[open] summary::after {
+	content: '\25BC'; 
+}
+
+.btnUser{
+    background-color: #D2DEEE;
+    border-radius: 100%;
+    padding: 5px;
+	z-index: 13;
+	position: relative;
+}
+
+.userContainer{
+	width: 20%;
+	z-index: 13;
+}
+
+.logoContainer{
+	width: 50%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.hamburgerContainer{
+	width: 20%;
+    display: flex;
+    justify-content: space-between;
+}
+
+/*Responsividade*/
+
+@media (max-width: 1000px) {
+	.header {
+		padding: 6px 22px;
+	}
+}
+
+@media (max-width: 720px) {
+	.header .logo {
+		width: 120px;
+	}
+
+	.header .logo img {
+		transform: translate(40%);
+	}
+
+	.header .sideBar ul {
+		margin-top: 82px;
+	}
+
+	.header .hidden{
+		display: none;
+	}
+	
+	
+}
+
+@media (max-width: 720px) {
+	.header .logo {
+		width: 70px;
+	}
+
+	.header .sideBar {
+		width: 210px;
+	}
+}
